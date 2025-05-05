@@ -9,7 +9,7 @@ CXXFLAGS = -Wall -Werror -g -std=c++17 -o
 # You can select which file to make 
 # For example: make array, make vector
 
-all: array io node queue stack vector
+all: array hash io node queue stack vector
 
 # Cleans up binaries
 clean: 
@@ -17,6 +17,9 @@ clean:
 
 array: array.cpp
 	$(CXX) $(CXXFLAGS) array array.cpp
+
+hash: hash.cpp
+	$(CXX) $(CXXFLAGS) hash hash.cpp
 
 io: io.cpp
 	$(CXX) $(CXXFLAGS) io io.cpp
