@@ -3,7 +3,7 @@
 # compile with different compilers
 CXX = g++
 
-CXXFLAGS = -Wall -g
+CXXFLAGS = -Wall -Werror -g -std=c++17 -o
 
 # Command: make all makes all binarys
 # You can select which file to make 
@@ -11,20 +11,23 @@ CXXFLAGS = -Wall -g
 
 all: array io node queue stack vector
 
+clean: 
+	rm array io node queue stack vector
+
 array: array.cpp
-	$(CXX) $(CXXFLAGS) -o array array.cpp
+	$(CXX) $(CXXFLAGS) array array.cpp
 
 io: io.cpp
-	$(CXX) $(CXXFLAGS)-o io io.cpp
+	$(CXX) $(CXXFLAGS) io io.cpp
 
 node: node.cpp
-	$(CXX) $(CXXFLAGS) -o node node.cpp
+	$(CXX) $(CXXFLAGS) node node.cpp
 
 queue: queue.cpp
-	$(CXX) $(CXXFLAGS) -o queue queue.cpp
+	$(CXX) $(CXXFLAGS) queue queue.cpp
 
 stack: stack.cpp
-	$(CXX) $(CXXFLAGS) -o stack stack.cpp
+	$(CXX) $(CXXFLAGS) stack stack.cpp
 
 vector: vector.cpp
-	$(CXX) $(CXXFLAGS) -o vector vector.cpp
+	$(CXX) $(CXXFLAGS) vector vector.cpp
