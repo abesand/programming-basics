@@ -1,21 +1,27 @@
 #include <iostream>
+
+template <class T>
 class Node{
   public:
 
     Node(){
-      value = 0;
+
+    }
+
+    Node(T v){
+      value = v;
       next = nullptr;
     }
 
     ~Node(){}
 
-    void setValue(int v){
+    void setValue(T v){
       value = v;
     }
     void setNext(Node* n){
       next = n;
     }
-    int getValue(){
+    T getValue(){
       return value;
     }
     void printValue(){
@@ -24,18 +30,13 @@ class Node{
 
 
   private:
-    int value;
+    T value;
     Node* next;
 };
 
 
 int main(){
-  Node n;
-  Node m;
-  n.setValue(10);
-  n.printValue();
-  m.setValue(20);
-  m.printValue();
-  n.setNext(&m);
+  Node n(17);
+
   return 0;
 }

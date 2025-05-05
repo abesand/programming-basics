@@ -11,6 +11,7 @@ CXXFLAGS = -Wall -Werror -g -std=c++17 -o
 
 all: array io node queue stack vector
 
+# Cleans up binaries
 clean: 
 	rm array io node queue stack vector
 
