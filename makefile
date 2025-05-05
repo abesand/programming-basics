@@ -13,7 +13,7 @@ all: array hash io node queue stack vector
 
 # Cleans up binaries
 clean: 
-	rm array io node queue stack vector
+	rm array hash io node queue stack vector
 
 array: array.cpp
 	$(CXX) $(CXXFLAGS) array array.cpp

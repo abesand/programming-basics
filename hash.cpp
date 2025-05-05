@@ -1,8 +1,26 @@
 #include <map>
 #include <vector>
+#include <string>
+using namespace std; 
+
+void setHashFunction(map<int, string>& m, vector<string>& v){
+  for(auto& pair : m){
+    int key = pair.first;
+    string value = pair.second;
+    key = key % v.capacity();     // hash function
+    v[key] = value;
+  }
+}
+
+string retrieveHashValue(int key, const vector<string>& v){
+  return v.at(key % v.capacity());
+}
 
 int main(){
-  std::map<int, string> dora {{1, "bob"}, {2, "sara"}, {3, "tom"}};
-  std::vector<string> hashTable;
+  map<int, string> dora {{100, "bob"}, {200, "sara"}, {305, "tom"}};
+  vector<string> hashTable;
+
+
+  
   return 0;
 }
