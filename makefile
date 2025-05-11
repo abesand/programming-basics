@@ -2,7 +2,7 @@
 # sure you can have different targets
 # compile with different compilers
 CXX = g++
-#-Werror add to cxxflags
+#-Werror add to cxxflags after working with pointers
 CXXFLAGS = -Wall -g -std=c++17 -o
 
 # Command: make all makes all binarys
