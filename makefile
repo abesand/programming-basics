@@ -3,20 +3,23 @@
 # compile with different compilers
 CXX = g++
 #-Werror add to cxxflags after working with pointers
-CXXFLAGS = -Wall -g -std=c++17 -o
+CXXFLAGS = -Wall -g -std=c++23 -o
 
 # Command: make all makes all binarys
 # You can select which file to make 
 # For example: make array, make vector
 
-all: array hash io node pointer queue stack vector
+all: array  deque hash io node pointer queue stack vector
 
 # Cleans up binaries
 clean: 
-	rm array hash io node pointer queue stack vector
+	rm array deque hash io node pointer queue stack vector
 
 array: array.cpp
 	$(CXX) $(CXXFLAGS) array array.cpp
+
+deque: deque.cpp
+	$(CXX) $(CXXFLAGS) deque deque.cpp
 
 hash: hash.cpp
 	$(CXX) $(CXXFLAGS) hash hash.cpp
