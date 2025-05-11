@@ -8,7 +8,7 @@ void multiply(int x, int y){
 
 int main(){
   std::string phrase;
-  std::cout << "write something here" << std::endl;
+  std::cout << "lets barbeque these motherfuckas" << std::endl;
   std::cin >> phrase;                               // how come it doesnt print multiply lines? just one word
   std::cout << phrase << std::endl; 
 

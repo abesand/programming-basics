@@ -12,5 +12,6 @@ int main()
   std::cout << dcue.back() << std::endl;
   dcue.push_front(verse.back());
   std::cout << dcue.front() << std::endl;
+
  return 0;
 }
