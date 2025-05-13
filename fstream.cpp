@@ -46,40 +46,37 @@ void uzi()
   std::cout << std::endl;
 }
 
-void rob()
-{
-   std::cout <<"           ^                                                         "<< std::endl;
-   std::cout <<"          | |                                                        "<< std::endl; 
-   std::cout <<"        @#####@                                                     " << std::endl;
-   std::cout <<"      (###   ###)-.                                                 " << std::endl; 
-   std::cout <<R"    .(###     ###) \                                                 "<< std::endl; 
-   std::cout <<"   /  (###   ###)   )                                               "<< std::endl;   
-   std::cout <<"  (=-  .@#####@|_--" 	"This is a hold up! Put all your money in the" << std::endl;   
-   std::cout <<"  /\    \_|l|_/ (\   	disk drive slot, and no one gets hurt!        "<< std::endl; 
-   std::cout <<" (=-\     |l|    /                                                "  << std::endl; 
-   std::cout <<"  \  \.___|l|___/                                                 "  << std::endl; 
-   std::cout <<"  /\      |_|   /                                                 "  << std::endl; 
-   std::cout <<" (=-\._________/\                                                 "  << std::endl;   
-   std::cout <<"  \             /                                                 "  << std::endl;   
-   std::cout <<"    \._________/                                                  "  << std::endl;   
-   std::cout <<"      #  ----  #                                                  "  << std::endl;  
-   std::cout <<"      #   __   #                                                  "  << std::endl;    
-   std::cout <<"      \########/                                                  "  << std::endl;  
-   std::cout <<"                                                                  "  << std::endl;  
-   std::cout <<"          V                                                       "  << std::endl;    
-   std::cout <<"              V                                                   "  << std::endl;        
-   std::cout <<"            V                                                     "  << std::endl;      
-}                                                                                  
+//void rob()
+//{
+//   std::cout <<"           ^                                                         "<< std::endl;
+//   std::cout <<"          | |                                                        "<< std::endl; 
+//   std::cout <<"        @#####@                                                     " << std::endl;
+//   std::cout <<"      (###   ###)-.                                                 " << std::endl; 
+//   std::cout <<R"    .(###     ###) \                                                 "<< std::endl; 
+//   std::cout <<"   /  (###   ###)   )                                               "<< std::endl;   
+//   std::cout <<"  (=-  .@#####@|_--" 	"This is a hold up! Put all your money in the" << std::endl;   
+//   std::cout <<"  /\    \_|l|_/ (\   	disk drive slot, and no one gets hurt!        "<< std::endl; 
+//   std::cout <<" (=-\     |l|    /                                                "  << std::endl; 
+//   std::cout <<"  \  \.___|l|___/                                                 "  << std::endl; 
+//   std::cout <<"  /\      |_|   /                                                 "  << std::endl; 
+//   std::cout <<" (=-\._________/\                                                 "  << std::endl;   
+//   std::cout <<"  \             /                                                 "  << std::endl;   
+//   std::cout <<"    \._________/                                                  "  << std::endl;   
+//   std::cout <<"      #  ----  #                                                  "  << std::endl;  
+//   std::cout <<"      #   __   #                                                  "  << std::endl;    
+//   std::cout <<"      \########/                                                  "  << std::endl;  
+//   std::cout <<"                                                                  "  << std::endl;  
+//   std::cout <<"          V                                                       "  << std::endl;    
+//   std::cout <<"              V                                                   "  << std::endl;        
+//   std::cout <<"            V                                                     "  << std::endl;      
+//}                                                                                  
                                                                                    
 int main()                                                                         
 {                                                                                  
-   // std::ofstream ghostFace("ghostface.txt");                                     << std::endl;
-   // ghostFace << "the pupils burn from the gaze of the sunlight" << std::endl;    << std::endl;
-   // ghostFace << "tryna go legit this time with no gun fights" << std::endl;      << std::endl;
- // ghostFace.close();
-
-  std::ofstream reciept("reciept.txt");
-  std::cout << std::endl;
+ // std::ifstream receipt("");
+  std::string building;
+  receipt >> building;
+  std::cout << building << std::endl;
   std::cout << "Welcome to the Gun Shop!" << std::endl;
   std::cout << "We have a wide selection of guns to choose from." << std::endl;
   std::cout << "Which gun would you like to see?" << std::endl;
@@ -100,10 +97,10 @@ int main()
     glock19();
     std::cout << "Solid choice. We are unforuntaely out of 9mm however." << std::endl;
   }
-  if(gunChoice == "rob")
-  {
-    rob();
-    std::cout << "you punk ***** ill ****** **** ***!" << std::endl;
-  }
+//  if(gunChoice == "rob")
+//  {
+//   rob();
+//    std::cout << "you punk ***** ill ****** **** ***!" << std::endl;
+//  }
   return 0;
 }
