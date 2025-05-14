@@ -1,33 +1,51 @@
 #include <iostream>
-
 template <class T>
-class Node{
+class Node
+{
   public:
 
-    Node(){
-      
+    Node()
+    {
+
     }
 
-    Node(T v){
+    ~Node()
+    {
+
+    }
+
+    Node(T v, Node * node)
+    {
       value = v;
-      next = nullptr;
+      next = node;
     }
 
-    ~Node(){}
-
-    void setValue(T v){
+    void setValue(T v)
+    {
       value = v;
     }
-    void setNext(Node* n){
+    void setNext(Node* n)
+    {
       next = n;
     }
-    T getValue(){
+
+    T getValue() const
+    {
       return value;
     }
-    void printValue(){
-      std::cout << value << std::endl;
+    
+    Node * getNext() const
+    {
+      return next;
     }
-
+    
+    void linearTraverse() const
+    {
+      while(this.getnext() != nullptr)
+      {
+        std::cout << this->getValue() << std::endl;
+      }
+    }
 
   private:
     T value;
@@ -36,7 +54,7 @@ class Node{
 
 
 int main(){
-  Node n(17);
 
   return 0;
 }
+
