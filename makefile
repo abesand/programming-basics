@@ -9,11 +9,11 @@ CXXFLAGS = -Wall -g -std=c++23 -o
 # You can select which file to make 
 # For example: make array, make vector
 
-all: array deque fstream hash io node pointer queue stack vector
+all: array deque fstream hash io node pointer queue sll stack vector
 
 # Cleans up binaries
 clean: 
-	rm array deque fstream hash io node pointer queue stack vector
+	rm array deque fstream hash io node pointer queue sll stack vector
 
 array: array.cpp
 	$(CXX) $(CXXFLAGS) array array.cpp
@@ -38,6 +38,9 @@ pointer: pointer.cpp
 
 queue: queue.cpp
 	$(CXX) $(CXXFLAGS) queue queue.cpp
+
+sll: sll.cpp
+	$(CXX) $(CXXFLAGS) sll sll.cpp
 
 stack: stack.cpp
 	$(CXX) $(CXXFLAGS) stack stack.cpp
