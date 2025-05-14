@@ -6,7 +6,7 @@ class Node
 
     Node()
     {
-
+      next = nullptr;
     }
 
     ~Node()
@@ -18,6 +18,12 @@ class Node
     {
       value = v;
       next = node;
+    }
+
+    Node(T v)
+    {
+      value = v;
+      next = nullptr;
     }
 
     void setValue(T v)
@@ -41,9 +47,14 @@ class Node
     
     void linearTraverse() const
     {
-      while(this.getnext() != nullptr)
+      std::cout << this->getValue() << std::endl;
+      if(this->getNext() == nullptr)
       {
-        std::cout << this->getValue() << std::endl;
+        return;
+      }
+      else 
+      {
+        this->getNext()->linearTraverse();
       }
     }
 
@@ -53,8 +64,14 @@ class Node
 };
 
 
-int main(){
-
+int main()
+{
+  Node a(1);
+  Node b(2, &a);
+  Node c(3, &b);
+  Node d(4, &c);
+  Node e(5, &d);
+  e.linearTraverse();
   return 0;
 }
 
