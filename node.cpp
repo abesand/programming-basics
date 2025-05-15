@@ -89,6 +89,7 @@ class Node
 
 int main()
 {
+ // Node u;
   Node a(1);
   Node b(2, &a);
   Node c(3, &b);

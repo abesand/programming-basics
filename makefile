@@ -2,8 +2,8 @@
 # sure you can have different targets
 # compile with different compilers
 CXX = g++
-#-Werror add to cxxflags after working with pointers
-CXXFLAGS = -Wall -g -std=c++23 -o
+
+CXXFLAGS = -Wall -Werror -g -std=c++23 -o
 
 # Command: make all makes all binarys
 # You can select which file to make 
