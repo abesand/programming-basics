@@ -91,12 +91,12 @@ class Node
      */
 };
 
-int hashFunction(const Node<int> &n)
+int hashFunction(const Node<int> & n)
 {
   return n.getValue() % 11;
 }
 
-void hashInsert(std::vector<Node<int>> &v, const Node<int> &n)
+void hashInsert(std::vector<Node<int>> & v, const Node<int> & n)
 {
   v.at(hashFunction(n)) = n;
 }
@@ -110,6 +110,9 @@ int main()
   Node e(777);
   Node f(666);
   std::vector<Node<int>> hashTable;
+ // hashInsert(hashTable, f);
+  hashTable.push_back(a);
+  std::vector<Node<int>>::iterator it;
 
   return 0;
 }
