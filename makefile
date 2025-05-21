@@ -13,7 +13,10 @@ all: array deque fstream hash io node pointer queue sll stack vector
 
 # Cleans up binaries
 clean: 
-	rm array deque fstream hash io node pointer queue sll stack vector
+	rm api array deque fstream hash io node pointer queue sll stack vector
+
+api: api.cpp
+	$(CXX) $(CXXFLAGS) api api.cpp
 
 array: array.cpp
 	$(CXX) $(CXXFLAGS) array array.cpp
